@@ -76,11 +76,11 @@ readinessProbe:
 
 resources: {}
   limits:
-     cpu: 100m
-     memory: 128Mi
-   requests:
-     cpu: 100m
-     memory: 64Mi
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 64Mi
 
 autoscaling:
   enabled: false
