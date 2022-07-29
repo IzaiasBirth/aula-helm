@@ -46,6 +46,7 @@ service:
   type: ClusterIP
   port: 80
   targetPort: 8080
+  protocol: TCP
 
 ingress:
   enabled: true
