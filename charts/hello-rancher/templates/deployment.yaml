@@ -4,7 +4,6 @@ metadata:
   name: {{ include "hello-rancher.fullname" . }}
   labels:
     {{- include "hello-rancher.labels" . | nindent 4 }}
-
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -20,7 +19,6 @@ spec:
       {{- end }}
       labels:
         {{- include "hello-rancher.selectorLabels" . | nindent 8 }}
-
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
@@ -44,7 +42,6 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
-      
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
